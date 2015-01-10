@@ -1,0 +1,9 @@
+<h1> List of <%= @category.name %> </h1>
+
+<div>
+	<% @books.each do |book| %>
+		<%= link_to book.name, book_path(book.id) %>
+		<br>
+	<% end %>
+</div>
+
