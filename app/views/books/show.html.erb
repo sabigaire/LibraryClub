@@ -1,7 +1,65 @@
-<h1> Details of <%= @book.name %> </h1>
 
-		Book Name: <%= @book.name %>
-		</br>
-		Publisher: <%= @book.publisher %>
-		</br>
-		Author: <%= link_to @author.name, author_path(@author.id) %>
+
+
+<!-- <a class="btn btn-default" href="#" role="button">Link</a> -->
+
+
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+
+  <link href="../../assets/stylesheets/stylesheet.css" rel="stylesheet">
+</head>
+<body>
+<div class="main-wrapper">
+
+  <div class="header">
+	<div class="logo"><h1>पुस्तकालय</h1></div>
+
+  </div>
+  <div class="container" >
+
+    <div style="width: 100%; padding: 20px 20% 0 20%;" align='center'>
+      <table class="table table-bordered table-striped" align="center" style="width: 100%;float: left;">
+        <thead>
+        <tr>
+          <th>
+            Details of  <%= @book.name %>
+
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+              <td>Book Name:</td>
+              <td> <%= @book.name %></td>
+            </tr>
+
+            <tr><td> Publisher:</td>
+              <td><%= @book.publisher %></td>
+            </tr>
+<tr> <td>Author:</td> <td><%= link_to @author.name, author_path(@author.id) %></td></tr>
+
+
+              </td>
+
+            </tr>
+
+
+
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+  </div>
+
+  <a href="http://localhost:3000">Return to main page</a>
+</div>
+</body>
+</html>
